@@ -10,7 +10,7 @@ double task17(double x, double y) {
 
 	if (d_x == 0) {
 		printf("Вираз не має вмісту при таких значеннях х та y\n");
-		return;
+		return 0;
 	}
 	else {
 		double exp1 = y - sqrt(fabs(x));
@@ -18,7 +18,7 @@ double task17(double x, double y) {
 
 		if (exp1 * exp2 == 0) {
 			printf("Вираз не має вмісту при таких значеннях х та y\n");
-			return;
+			return 0;
 		}
 		else {
 			double result = log(fabs(exp1 * exp2));
@@ -32,7 +32,7 @@ double task51(double x) {
 	// Логіка завдання 51
 	if (x * x == 1 || x <= 2) {
 		printf("Вираз не має вмісту при таких значеннях х\n");
-		return;
+		return 0;
 	}
 	else {
 		double result = (log(2 * x - 4) / log(3)) / (x * x - 1);
@@ -45,7 +45,7 @@ double task54(double x) {
 	// Логіка завдання 54
 	if (x * x - 9 <= 0 || x * x - 9 == 1) {
 		printf("Вираз не має вмісту при таких значеннях х\n");
-		return;
+		return 0;
 	}
 	else {
 		double result = 1 / (log(x * x - 9) / log(5));
@@ -58,7 +58,7 @@ double task55(double x) {
 	// Логіка завдання 55
 	if (2 * x - 5 < 0 || x == 1 || x == -5) {
 		printf("Вираз не має вмісту при таких значеннях х\n");
-		return;
+		return 0;
 	}
 	else {
 		double result = sqrt(2 * x - 5) / (x * x + 4 * x - 5);
@@ -69,9 +69,9 @@ double task58(double x) {
 	printf("\n\nЗавдання 58: (x - 1) / sqrt(x^2 - 4x + 3)\n");
 
 	// Логіка завдання 58
-	if (x == 1 || x == 3) {
+	if (x >= 1 || x <= 3) {
 		printf("Вираз не має вмісту при таких значеннях х\n");
-		return;
+		return 0;
 	}
 	else {
 		double result = (x - 1) / sqrt(x * x - 4 * x + 3);
